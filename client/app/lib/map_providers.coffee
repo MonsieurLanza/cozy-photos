@@ -12,7 +12,7 @@ module.exports =
         ext: 'png'
         maxZoom: 12
 
-    'Open street map France': L.titleLayer 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+    'Open street map France': L.tileLayer 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
         maxZoom: 20,
         attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 
