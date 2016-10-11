@@ -40,7 +40,7 @@ module.exports = class MapView extends BaseView
             zoom:       6       # 6 = default zoom
             maxZoom:    17
             minZoom:    2
-            layers:     baseLayers["Water color"] #default map background
+            layers:     baseLayers["Open street map France"] #default map background
             maxBounds:  L.latLngBounds [84.26, -170], [-59.888, 192.30]
 
         @map.on 'contextmenu', (e) =>
@@ -77,7 +77,7 @@ module.exports = class MapView extends BaseView
 
         # add control button on the map
         layerControl = L.control.layers baseLayers, overlays,
-            position: 'bottomright'
+            position: 'topright'
         .addTo @map
 
         @map.addControl new L.Control.Search
@@ -173,5 +173,3 @@ module.exports = class MapView extends BaseView
 
     refresh: ->
         @map.invalidateSize() # force to load all map tiles
-
-
