@@ -37,7 +37,7 @@
     "build": "npm run build:client && npm run build:server",
     "start": "node build/server.js"
   },
-  "repository": "https://github.com/cozy/cozy-photos.git",
+  "repository": "https://github.com/MonsieurLanza/cozy-photos.git@lanza-map",
   "readmeFilename": "README.md",
   "cozy-permissions": {
     "Photo": {
