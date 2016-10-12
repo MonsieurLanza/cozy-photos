@@ -535,6 +535,10 @@ module.exports = {
     ext: 'png',
     maxZoom: 12
   }),
+  'Open street map France': L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }),
   'Open street map hot': L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     attribution: 'Map by <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }),
@@ -3067,7 +3071,7 @@ module.exports = MapView = (function(_super) {
       zoom: 6,
       maxZoom: 17,
       minZoom: 2,
-      layers: baseLayers["Water color"],
+      layers: baseLayers["Open street map France"],
       maxBounds: L.latLngBounds([84.26, -170], [-59.888, 192.30])
     });
     this.map.on('contextmenu', (function(_this) {
@@ -3101,7 +3105,7 @@ module.exports = MapView = (function(_super) {
       })
     };
     layerControl = L.control.layers(baseLayers, overlays, {
-      position: 'bottomright'
+      position: 'topright'
     }).addTo(this.map);
     return this.map.addControl(new L.Control.Search({
       url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
